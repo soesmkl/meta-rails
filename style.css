@@ -1,0 +1,107 @@
+:root {
+  --page: #f7f5f0;
+  --text: #242424;
+  --heading: #243746;
+  --box: #ffffff;
+  --border: #d5d9dc;
+  --accent: #e8aa32;
+  --content-width: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--page);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.section-inner {
+  width: min(calc(100% - 40px), var(--content-width));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 72px 0 92px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero::before {
+  display: block;
+  width: 64px;
+  height: 6px;
+  margin-bottom: 40px;
+  background: var(--accent);
+  content: "";
+}
+
+.brand-mark, .footer-brand {
+  margin: 0 0 24px;
+  color: var(--heading);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 { margin: 0; color: var(--heading); line-height: 1.2; }
+h1 { font-size: 32px; letter-spacing: -.03em; }
+h2 { margin-bottom: 32px; font-size: 24px; letter-spacing: -.02em; }
+h3 { margin-bottom: 14px; font-size: 20px; }
+p { margin: 0; }
+
+.hero-question {
+  max-width: 22ch;
+  margin: 28px 0 0;
+  color: var(--heading);
+  font-size: clamp(28px, 7vw, 48px);
+  font-weight: 650;
+  letter-spacing: -.04em;
+  line-height: 1.12;
+}
+
+.section { padding: 72px 0; }
+.knowledge-grid { display: grid; gap: 16px; }
+
+.knowledge-card {
+  padding: 28px 24px 30px;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--accent);
+  background: var(--box);
+}
+
+.knowledge-card p { max-width: 45ch; }
+
+.facts-section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.facts-list { border-top: 1px solid var(--border); }
+.facts-list p { padding: 22px 0; border-bottom: 1px solid var(--border); }
+.facts-list p:last-child { border-bottom: 0; }
+
+.notice-section { padding: 64px 0; }
+.notice-section h2 { margin: 0; padding-left: 20px; border-left: 5px solid var(--accent); }
+.ask-section { padding-top: 0; }
+
+.site-footer {
+  padding: 40px 0 48px;
+  background: var(--heading);
+  color: var(--page);
+}
+
+.site-footer .footer-brand { margin-bottom: 4px; color: var(--page); }
+
+@media (min-width: 760px) {
+  .hero { padding: 96px 0 120px; }
+  .section { padding: 96px 0; }
+  .knowledge-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+  .knowledge-card { padding: 32px 28px 36px; }
+  .notice-section { padding: 80px 0; }
+  .ask-section { padding-top: 0; }
+}
