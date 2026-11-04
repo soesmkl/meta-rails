@@ -3,80 +3,138 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Find materials for construction and repair jobs.">
+    <meta name="description" content="Find the right construction or repair material for your job.">
     <title>meta-rails | Find the right material for your job</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <main>
-      <section class="hero" aria-labelledby="site-name">
-        <div class="section-inner">
-          <p class="brand-mark" aria-hidden="true">meta-rails</p>
-          <h1 id="site-name">meta-rails</h1>
-          <p class="hero-question">What material do you need for your job?</p>
+    <header class="site-header">
+      <div class="section-inner header-inner">
+        <a class="brand" href="#top" aria-label="meta-rails home">meta<span>-</span>rails</a>
+        <nav aria-label="Main navigation">
+          <a href="#how-it-works">How it works</a>
+          <a href="#ask">Ask a question</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="section-inner hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Materials, made clearer</p>
+            <h1>Find the right material for the job.</h1>
+            <p class="hero-lede">Describe what you are fixing, share what you can see, and get a clearer place to start.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#ask">Ask about a material <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="#how-it-works">See how it works</a>
+            </div>
+            <p class="hero-note"><span class="status-dot"></span> Built for construction and repair jobs</p>
+          </div>
+          <div class="hero-visual">
+            <img src="assets/bricks.png" alt="Stacked terracotta bricks in a workshop">
+            <div class="visual-tag"><span>01</span> See the material</div>
+          </div>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="knowledge-title">
+      <section class="section intro-section" id="how-it-works">
+        <div class="section-inner intro-grid">
+          <div>
+            <p class="eyebrow">A better starting point</p>
+            <h2>Less guessing.<br><em>More making.</em></h2>
+          </div>
+          <p class="intro-copy">meta-rails helps you identify construction and repair materials, find a suitable match for your project, and discover where to buy it.</p>
+        </div>
+      </section>
+
+      <section class="section methods-section" aria-labelledby="methods-title">
         <div class="section-inner">
-          <h2 id="knowledge-title">Three ways to search</h2>
-          <div class="knowledge-grid">
-            <article class="knowledge-card">
-              <h3>Search by photo</h3>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Three ways in</p>
+              <h2 id="methods-title">Start with what you know.</h2>
+            </div>
+            <p>Even a rough description can point the search in the right direction.</p>
+          </div>
+          <div class="method-grid">
+            <article class="method-card method-card-dark">
+              <div class="method-number">01</div>
+              <h3>Show us a photo</h3>
               <p>Upload a photo of a material you want to identify or replace.</p>
+              <span class="card-arrow" aria-hidden="true">↗</span>
             </article>
-            <article class="knowledge-card">
-              <h3>Describe what you need</h3>
-              <p>Explain the material or job in your own words, even if you do not know the product name.</p>
+            <article class="method-card">
+              <div class="method-number">02</div>
+              <h3>Describe the job</h3>
+              <p>Use your own words, even if you do not know the product name.</p>
+              <span class="card-arrow" aria-hidden="true">↗</span>
             </article>
-            <article class="knowledge-card">
-              <h3>Add useful details</h3>
-              <p>Combine a photo with dimensions, intended use or required finish to narrow down the match.</p>
+            <article class="method-card method-card-image">
+              <img src="assets/timber.png" alt="Oak timber boards and a measuring tape">
+              <div class="image-card-overlay">
+                <div class="method-number">03</div>
+                <h3>Add the detail</h3>
+                <p>Dimensions, intended use, and finish can narrow the match.</p>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section facts-section" aria-labelledby="facts-title">
-        <div class="section-inner">
-          <h2 id="facts-title">What you receive</h2>
-          <div class="facts-list">
-            <p>Get likely material matches based on your photo, description or both.</p>
-            <p>See which features match and which details you should confirm before buying.</p>
-            <p>Find relevant shops or suppliers where you can check price and availability.</p>
-            <p>Use the service for construction and repair jobs when you need a material solution.</p>
+      <section class="section receive-section" aria-labelledby="receive-title">
+        <div class="section-inner receive-grid">
+          <div class="receive-image">
+            <img src="assets/tiles.png" alt="Charcoal ceramic tiles in a materials studio">
+            <span class="image-caption">Material library / 03</span>
+          </div>
+          <div class="receive-copy">
+            <p class="eyebrow">What you receive</p>
+            <h2 id="receive-title">A useful next step, not a wild guess.</h2>
+            <div class="receive-list">
+              <p><span>01</span> Likely material matches based on your photo, description or both.</p>
+              <p><span>02</span> The features that match, plus details to confirm before buying.</p>
+              <p><span>03</span> Relevant shops or suppliers where you can check price and availability.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section signup-section" aria-labelledby="signup-title">
-        <div class="section-inner">
-          <h2 id="signup-title">Join by email</h2>
+        <div class="section-inner signup-panel">
+          <div>
+            <p class="eyebrow">Keep in touch</p>
+            <h2 id="signup-title">Join by email.</h2>
+            <p>We use your email only to reply about joining.</p>
+          </div>
           <form class="signup-form" id="signup-form">
-            <div class="form-field">
-              <label for="email">Email address</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
+            <label for="email">Email address</label>
+            <div class="input-row">
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <button type="button" id="signup-button">Submit <span aria-hidden="true">↗</span></button>
             </div>
-            <p class="form-note">We use your email only to reply about joining.</p>
             <p class="practice-note">This is a practice form that sends nothing.</p>
-            <button type="button" id="signup-button">Submit email</button>
             <p class="form-message" id="form-message" aria-live="polite" hidden>Thanks — your practice response has been recorded on this page only.</p>
           </form>
         </div>
       </section>
 
-      <section class="section ask-section" aria-labelledby="ask-title">
-        <div class="section-inner">
-          <h2 id="ask-title">Ask about materials</h2>
+      <section class="section ask-section" id="ask" aria-labelledby="ask-title">
+        <div class="section-inner ask-panel">
+          <div class="ask-heading">
+            <p class="eyebrow">Need a steer?</p>
+            <h2 id="ask-title">Ask about materials.</h2>
+          </div>
           <div id="chatbot"></div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="section-inner">
-        <p class="footer-brand">meta-rails</p>
+      <div class="section-inner footer-inner">
+        <a class="brand brand-light" href="#top">meta<span>-</span>rails</a>
         <p>Materials and tools for the job.</p>
+        <p class="footer-small">A clearer way to get started.</p>
       </div>
     </footer>
 
