@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Materials and tools for the job.">
-    <title>meta-rails | Materials and tools for your job</title>
+    <meta name="description" content="Find materials for construction and repair jobs.">
+    <title>meta-rails | Find the right material for your job</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -13,25 +13,25 @@
         <div class="section-inner">
           <p class="brand-mark" aria-hidden="true">meta-rails</p>
           <h1 id="site-name">meta-rails</h1>
-          <p class="hero-question">What would you want to do today?</p>
+          <p class="hero-question">What material do you need for your job?</p>
         </div>
       </section>
 
       <section class="section" aria-labelledby="knowledge-title">
         <div class="section-inner">
-          <h2 id="knowledge-title">Three things worth knowing</h2>
+          <h2 id="knowledge-title">Three ways to search</h2>
           <div class="knowledge-grid">
             <article class="knowledge-card">
-              <h3>Choose materials for your job</h3>
-              <p>We aim to help you find materials suited to what you want to achieve.</p>
+              <h3>Search by photo</h3>
+              <p>Upload a photo of a material you want to identify or replace.</p>
             </article>
             <article class="knowledge-card">
-              <h3>Work out what you need</h3>
-              <p>We aim to help you identify the materials, specifications, quantities and tools your job needs.</p>
+              <h3>Describe what you need</h3>
+              <p>Explain the material or job in your own words, even if you do not know the product name.</p>
             </article>
             <article class="knowledge-card">
-              <h3>Find sourcing and delivery help</h3>
-              <p>We plan to offer materials for sale, referrals to individual suppliers, and help with sourcing and delivery.</p>
+              <h3>Add useful details</h3>
+              <p>Combine a photo with dimensions, intended use or required finish to narrow down the match.</p>
             </article>
           </div>
         </div>
@@ -39,26 +39,36 @@
 
       <section class="section facts-section" aria-labelledby="facts-title">
         <div class="section-inner">
-          <h2 id="facts-title">Good to know</h2>
+          <h2 id="facts-title">What you receive</h2>
           <div class="facts-list">
-            <p>meta-rails plans to suggest materials suited to your task and propose relevant materials it can sell.</p>
-            <p>Photo-based advice is a planned feature, but photo uploads are not available on this page.</p>
-            <p>meta-rails plans to help you find where to buy materials, potentially through partner suppliers.</p>
-            <p>meta-rails plans to check whether it can supply the quantity of material you need.</p>
-            <p>meta-rails plans to provide estimated costs based on industry averages.</p>
+            <p>Get likely material matches based on your photo, description or both.</p>
+            <p>See which features match and which details you should confirm before buying.</p>
+            <p>Find relevant shops or suppliers where you can check price and availability.</p>
+            <p>Use the service for construction and repair jobs when you need a material solution.</p>
           </div>
         </div>
       </section>
 
-      <section class="section notice-section" aria-labelledby="signup-title">
+      <section class="section signup-section" aria-labelledby="signup-title">
         <div class="section-inner">
-          <h2 id="signup-title">Sign-up opens soon.</h2>
+          <h2 id="signup-title">Join by email</h2>
+          <form class="signup-form" id="signup-form">
+            <div class="form-field">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <p class="form-note">We use your email only to reply about joining.</p>
+            <p class="practice-note">This is a practice form that sends nothing.</p>
+            <button type="button" id="signup-button">Submit email</button>
+            <p class="form-message" id="form-message" aria-live="polite" hidden>Thanks — your practice response has been recorded on this page only.</p>
+          </form>
         </div>
       </section>
 
-      <section class="section notice-section ask-section" aria-labelledby="ask-title">
+      <section class="section ask-section" aria-labelledby="ask-title">
         <div class="section-inner">
-          <h2 id="ask-title">The chatbot is coming soon.</h2>
+          <h2 id="ask-title">Ask about materials</h2>
+          <div id="chatbot"></div>
         </div>
       </section>
     </main>
@@ -69,5 +79,17 @@
         <p>Materials and tools for the job.</p>
       </div>
     </footer>
+
+    <script>
+      const signupForm = document.querySelector("#signup-form");
+      const signupButton = document.querySelector("#signup-button");
+      const formMessage = document.querySelector("#form-message");
+
+      signupButton.addEventListener("click", () => {
+        if (!signupForm.reportValidity()) return;
+        formMessage.hidden = false;
+      });
+    </script>
+    <script src="chatbot.js"></script>
   </body>
 </html>
